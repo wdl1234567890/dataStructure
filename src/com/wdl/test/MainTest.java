@@ -13,6 +13,8 @@ import com.wdl.linklist.LinkListNode2;
 import com.wdl.linklist.LinkListUtils;
 import com.wdl.linklist.SingleCircleLinkList;
 import com.wdl.queue.ArrayQueue;
+import com.wdl.sort.BaseNumberSortByArray;
+import com.wdl.sort.BaseNumberSortByLinkList;
 import com.wdl.sort.MergeSort;
 import com.wdl.sparsearray.SparseArray;
 import com.wdl.stack.ExspessionCal;
@@ -23,7 +25,23 @@ import com.wdl.stack.SuffixExspression;
 public class MainTest {
 
 	public static void main(String[] args) {
-		mergeSortTest();
+		BaseNumberSortByLinkListTest();
+	}
+	
+	public static void BaseNumberSortByLinkListTest() {
+		int[] arr = new int[]{8,47,15,788,1,3,6,2};
+		System.out.println("排序前的数组：" + Arrays.toString(arr));
+		BaseNumberSortByLinkList instance = BaseNumberSortByLinkList.instance(arr);
+		instance.baseNumberSort();
+		System.out.println("排序后的数组：" + Arrays.toString(arr));
+	}
+	
+	public static void BaseNumberSortTest() {
+		int[] arr = new int[]{8,47,15,788,1,3,6,2};
+		System.out.println("排序前的数组：" + Arrays.toString(arr));
+		BaseNumberSortByArray instance = BaseNumberSortByArray.instance(arr);
+		instance.baseNumberSort();
+		System.out.println("排序后的数组：" + Arrays.toString(arr));
 	}
 	
 	public static void mergeSortTest() {
